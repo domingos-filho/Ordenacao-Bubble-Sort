@@ -6,7 +6,8 @@ public class Program {
 
 		int[] array = { 5, 3, 8, 2, 6 };
 		int aux = 0;
-
+		int cont = 0;
+		
 		System.out.print("Array desordenado = { ");
 		for (int vect : array) {
 			System.out.print(vect + ", ");
@@ -19,7 +20,8 @@ public class Program {
 					aux = array[j];
 					array[j] = array[j + 1];
 					array[j + 1] = aux;
-				
+				} else {
+					cont ++;
 				}
 			}
 		}
@@ -29,6 +31,8 @@ public class Program {
 			System.out.print(vect + ", ");
 		}
 		System.out.println("}");
+		
+		System.out.println("Qauntidade de comparacoes e trocas realizadas: " + cont);
 	}
-
+	
 }
